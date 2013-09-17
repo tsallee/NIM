@@ -48,10 +48,6 @@ class Nim
 			game_state << binary_string.split("")
 		end
 
-		game_state.each do |row|
-			puts row.join(", ")
-		end
-
 		# Find the columns that add to 1
 		problem_columns = []
 
@@ -91,10 +87,10 @@ class Nim
 			selected_row.each_index do |index|
 				# Toggle any digit from a problem column
 				if (problem_columns.include?(index))
-					if (selected_row[index] == 0)
-						selected_row[index] = 1
+					if (selected_row[index] == "0")
+						selected_row[index] = "1"
 					else
-						selected_row[index] = 0
+						selected_row[index] = "0"
 					end
 				end
 			end
