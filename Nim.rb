@@ -3,8 +3,6 @@ class Nim
 	def initialize
 
 		@@board_configurations = [[1, 3, 5, 7], [4, 3, 7]]
-
-		new_game
 	
 	end
 
@@ -175,4 +173,5 @@ class Nim
 
 end
 
-Nim.new
+nim_game = Nim.new
+nim_game.new_game
